@@ -1,0 +1,144 @@
+*, *::before, *::after
+{
+    font-family: Roboto;
+    color: inherit;
+    --colorAccent: #00BFFF;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::selection
+{
+    background-color: var(--colorAccent);
+    color: white;
+    border-radius: 5px;
+}
+
+body
+{
+    color: white;
+    background-color: #151515;
+    margin: 0;
+    background-image: url(assets/background.png);
+    background-attachment: fixed;
+}
+
+h1
+{
+    margin: 0;
+    color: var(--colorAccent);
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+h3
+{
+    color: var(--colorAccent);
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+p
+{
+    margin: 0;
+    font-size: 17.5px;
+    line-height: 25px;
+}
+
+main
+{
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+}
+
+section
+{
+    width: 100%;
+}
+
+.headline
+{
+    text-align: center;
+    margin-bottom: 2px;
+    opacity: 0;
+}
+
+.headline p
+{
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+
+section:not(.headline)
+{
+    background-color: #2229;
+    padding: 16px;
+}
+
+article
+{
+    max-width: 100ch;
+    margin-inline: auto;
+    margin-top: 32px;
+    margin-bottom: 100px;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+article:not(.crystalPictures) div
+{
+    display: flex;
+    gap: 32px;
+}
+
+.crystalPictures
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crystalPictures div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.microscopePictures
+{
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    align-items: center;
+}
+
+img
+{
+    width: 200px;
+    transition: transform 250ms ease-in-out;
+    cursor: pointer;
+}
+
+img:hover
+{
+    transform: scale(180%);
+}
+
+.show
+{
+    opacity: 1;
+}
+
+a
+{
+    color: var(--colorAccent);
+    cursor: pointer;
+    text-decoration: none;
+}
