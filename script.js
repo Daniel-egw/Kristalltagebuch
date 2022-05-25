@@ -28,7 +28,7 @@ function observeSections()
     const observer = new IntersectionObserver(function(entries)
     {
        entries[0].isIntersecting ? entries[0].target.classList.add("show") : entries[0].target.classList.remove("show")
-    }, { threshold: 0.5 })
+    }, { threshold: 0.25 })
 
     $$(".headline, article").forEach(function(i)
     {

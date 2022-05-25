@@ -77,7 +77,7 @@ section
 
 section:not(.headline)
 {
-    background-color: #2229;
+    background-color: #2228;
     padding: 16px;
 }
 
@@ -95,6 +95,7 @@ article:not(.crystalPictures) div
 {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 .crystalPictures
@@ -121,7 +122,7 @@ article:not(.crystalPictures) div
 
 img
 {
-    width: 200px;
+    max-width: 200px;
     transition: transform 250ms ease-in-out;
     cursor: pointer;
 }
@@ -141,4 +142,28 @@ a
     color: var(--colorAccent);
     cursor: pointer;
     text-decoration: none;
+}
+
+
+@media (max-width: 800px)
+{
+    .crystalPictures
+    {
+        overflow: auto;
+    }
+
+    article div
+    {
+        flex-direction: column;
+    }
+
+    .microscopePictures
+    {
+        gap: 0;
+    }
+
+    .microscopePictures
+    {
+        max-width: 48%;
+    }
 }
